@@ -23,7 +23,7 @@ tclrefcount.a: tclrefcount.o
 	ar -r libtclrefcount8.6.a tclrefcount.o 
 
 tclrefcount.o: c/tclrefcount.c c/include/tclrefcount.h
-	$(CC) -Ic/include -c -o tclrefcount.o c/tclrefcount.c
+	$(CC) -Ic/include -c -fPIC -o tclrefcount.o c/tclrefcount.c
 
 SwiftTcl8_6:
 	@echo Ignore this: warning: module 'SwiftTcl8_6' does not contain any sources.
