@@ -8,8 +8,7 @@ import PackageDescription
 
 let package = Package(
     name: "Tcl8_6",
-    link: ["tcl8.6", "tclstub8.6", "tclrefcount8.6"],
-    link: "z",
+    link: ["tcl8.6", "tclstub8.6", "tclrefcount8.6", "z"],
     // This C code excluded from the Swift build
     // Build and install this static library with make
     exclude: ["c"]
