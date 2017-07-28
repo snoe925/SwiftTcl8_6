@@ -9,6 +9,7 @@ import PackageDescription
 let package = Package(
     name: "Tcl8_6",
     link: "tcl8.6",
+    link: "tclstub8.6",
     link: "tclrefcount8.6",
     link: "z",
     // This C code excluded from the Swift build
