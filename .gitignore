@@ -1,0 +1,3 @@
+.build/*
+tclrefcount.o
+libtclrefcount8.6.a
