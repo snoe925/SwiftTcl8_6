@@ -10,7 +10,7 @@ tclrefcount.a: tclrefcount.o
 tclrefcount.o: c/tclrefcount.c c/include/tclrefcount.h
 	$(CC) -Ic/include -c -fPIC -o tclrefcount.o c/tclrefcount.c
 
-install:
+install: tclrefcount.a
 	cp libtclrefcount8.6.a /usr/lib/x86_64-linux-gnu
 
 clean:
