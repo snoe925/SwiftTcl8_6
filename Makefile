@@ -7,13 +7,13 @@
 #TCLVERSION=8.6.6_2
 #BREWROOT=/usr/local/Cellar
 #TCLINCPATH=$(BREWROOT)/tcl-tk/$(TCLVERSION)/include
-#CFLAGSS="-I$(TCLINCPATH)" 
+#CFLAGSS=-I$(TCLINCPATH) 
 #TCLLIBPATH=$(BREWROOT)/tcl-tk/$(TCLVERSION)/lib
-#LDFLAGS="-L$(TCLLIBPATH)"
+#LDFLAGS=-L$(TCLLIBPATH)
 #SWIFT_LDFLAGS="-Xlinker -L$(TCLLIBPATH) -Xlinker -ltcl8.6"
 
 # Linux
-SWIFT_LDFLAGS="-Xlinker -ltcl8.6"
+SWIFT_LDFLAGS=-Xlinker -ltcl8.6
 
 .PHONY: SwiftTcl8_6
 
@@ -30,7 +30,7 @@ SwiftTcl8_6:
 	swift build $(SWIFT_LDFLAGS)
 
 install:
-	cp libtclrefcount.a /usr/lib/x86_64-linux-gnu
+	cp libtclrefcount8.6.a /usr/lib/x86_64-linux-gnu
 
 clean:
-	rm -rf tclrefcount.o libtclrefcount.a .build
+	rm -rf tclrefcount.o libtclrefcount8.6.a .build
