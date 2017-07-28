@@ -7,7 +7,7 @@ import PackageDescription
 // to make it easy to use a link SwiftTcl
 
 let package = Package(
-    name: "SwiftTcl8_6",
+    name: "Tcl8_6",
     // This C code excluded from the Swift build
     // Build and install this static library with make
     exclude: ["c"]
